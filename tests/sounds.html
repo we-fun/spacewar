@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>空间大战</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="author" content="h5-Lium / http://weibo.com/hellolium">
+	</head>
+	<body>
+		<button id="fire">fire</button>
+		<button id="welcome">welcome</button>
+		<button id="music">music</button>
+		
+		<script src="../lib/jquery.min.js"></script>
+		<script src="../lib/class.js"></script>
+		<script src="../lib/SoundPlayer.js"></script>
+		
+		<script>
+			var sp = new SoundPlayer();
+			
+			sp.load( {
+				fireSound: [
+					//'../sounds/ship/fire.mp3',
+					'../sounds/ship/fire.ogg'
+				]
+			}, false, true )
+			.load( {
+				welcomeVoice: [
+					//'../sounds/voices/welcome.mp3',
+					'../sounds/voices/welcome.ogg'
+				]
+			} )
+			.load( {
+				music: [
+					'../sounds/music/358232_j_s_song.mp3'
+					//'../sounds/music/376737_Skullbeatz___Bad_Cat_Maste.mp3',
+					//'../sounds/music/376737_Skullbeatz___Bad_Cat_Maste.ogg'
+				]
+			}, true );
+			
+			$( '#fire' ).on( 'click', function(){
+				sp.play( 'fireSound' );
+			} );
+			
+			$( '#welcome' ).on( 'click', function(){
+				sp.replay( 'welcomeVoice' );
+			} );
+			
+			$( '#music' ).on( 'click', function(){
+				sp.play( 'music' );
+			} );
+		</script>
+	</body>
+</html>

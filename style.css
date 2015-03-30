@@ -1,0 +1,55 @@
+/* Hard reset
+-------------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border: none;
+}
+
+.hidden {
+	display: none;
+}
+
+#overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+body, #container, #screen {
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+body {
+	background-color: black;
+	color: white;
+}
+
+#stats {
+	position: absolute;
+	top: 0;
+}
+
+/* crosshair */
+#crosshair {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -16px 0 0 -16px;
+	width: 32px;
+	height: 32px;
+}
+#userInfo {
+	width: 160px;
+	height: 60px;
+	position: fixed;
+	top: 100%;
+	left: 100%;
+	margin: -70px 0 0 -175px;
+	
+	font-size: 14px;
+	text-align: right;
+	line-height: 20px;
+}
