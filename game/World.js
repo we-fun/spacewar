@@ -18,7 +18,6 @@
 			this.renderer = new THREE.WebGLRenderer( { antialias: true } );
 			//this.renderer = new THREE.CanvasRenderer( { antialias: true } );
 			this.renderer.setClearColor( 0x000000, 1 );
-			this.onWindowResize();
 			
 			// dom, events
 			this.locked = false;
@@ -38,7 +37,7 @@
 			} );
 			$( window ).on( 'resize', function(){
 				_this.onWindowResize();
-			} );
+			} ).trigger( 'resize' );
 			// overlay
 			this.$overlay = $( '#overlay' );
 			this.overlayTimer = new Timer( function(){
@@ -64,7 +63,6 @@
 			
 			function start(){
 				// start
-				this.$screen.html( '' );
 				this.$screen.append( this.renderer.domElement );
 				this.stats = new Stats();
 				this.$container.append( this.stats.domElement );
@@ -225,9 +223,11 @@
 		},
 		
 		onWindowResize: function(){
-			var w = window.innerWidth,
+			//var w = window.innerWidth,
 			// XXX: removing the buggy white line at bottom
-			h = window.innerHeight + 3;
+			//h = window.innerHeight + 3;
+			var w = this.$screen.width();
+			var h = this.$screen.height();
 			
 			World.windowRatio = w / h;
 			this.camera.aspect = World.windowRatio;
