@@ -21,9 +21,11 @@ World.user = world.addUserShip( [ 0, 0, 0 ], [ 0, 0, -1 ] );
 world.bindCamera( World.user );
 
 // npc
+world.addAIShip( [ 0, -400, -2500 ], [ 0, 1, 0 ] );
 world.addAIShip( [ 0, 400, -2500 ], [ 0, -1, 0 ] );
 world.addAIShip( [ -400, 0, -2500 ], [ 1, 0, 0 ] );
 world.addAIShip( [ 400, 0, -2500 ], [ -1, 0, 0 ] );
+world.addAIShip( [ 0, -400, 2500 ], [ 0, 1, 0 ] );
 world.addAIShip( [ 0, 400, 2500 ], [ 0, -1, 0 ] );
 world.addAIShip( [ -400, 0, 2500 ], [ 1, 0, 0 ] );
 world.addAIShip( [ 400, 0, 2500 ], [ -1, 0, 0 ] );

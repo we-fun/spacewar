@@ -23,10 +23,21 @@
 			
 			// mesh
 			this.setGeometry( Ship.geometry.clone() );
-			var materials = [];
-			for ( var i = 0; i < Ship.materials.length; i ++ ) {
-				materials.push( Ship.materials[ i ].clone() );
-			}
+			var textures = [
+				'bluewool', 'redwool', 'opaque', 'netherrack',
+				'glowstone', 'cobblestone', 'brick', 'plank'
+			];
+			var texture = textures[
+				~~(Math.random()*textures.length)
+			];
+			var materials = [
+				new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'textures/diamond.png' )
+				} ),
+				new THREE.MeshBasicMaterial( {
+					map: THREE.ImageUtils.loadTexture( 'textures/'+ texture +'.png' )
+				} )
+			];
 			this.setMaterial( 
 				new THREE.MeshFaceMaterial( materials )
 			);
@@ -114,19 +125,6 @@
 		_name: 'ship',
 		//geometry: new THREE.CubeGeometry( 50, 50, 50 ),
 		geometry: geometry,
-		
-		//material: new THREE.MeshBasicMaterial( { color: 0x0000ff } ),
-		/*material: new THREE.MeshBasicMaterial( {
-			map: THREE.ImageUtils.loadTexture( 'textures/bluewool.png' )
-		} ),*/
-		materials: [
-			new THREE.MeshBasicMaterial( {
-				map: THREE.ImageUtils.loadTexture( 'textures/diamond.png' )
-			} ),
-			new THREE.MeshBasicMaterial( {
-				map: THREE.ImageUtils.loadTexture( 'textures/bluewool.png' )
-			} )
-		],
 		
 		hpMax: Unit.hpMax,
 		speed: Unit.speed
