@@ -21,11 +21,12 @@
 			
 			// dom, events
 			this.locked = false;
+			this.$body = $( 'body' );
 			this.$container = $( '#container' );
 			this.$screen = $( '#screen' );
 			this.$userInfo = $( '#userInfo' );
 			var _this = this;
-			this.$container.on( 'click', function( event ){
+			this.$body.on( 'click', function( event ){
 				if ( ! _this.locked ) {
 					event.preventDefault();
 					Locker.lockPointer( this );
