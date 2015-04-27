@@ -1,8 +1,8 @@
 # 空间大战 `space`
 
-![截图](https://coding.net/u/fritx/p/space/git/raw/master/screenshots/20150331225000.png)
+![截图](http://7xig6a.com1.z0.glb.clouddn.com/20150331225000.png)
 
-3d的飞船射击游戏，与npc混战，键盘W/S/A/D/R/F前后左右升降，鼠标控制视角，点左键射击。进入即玩，刷新再来。背景音乐，物理音效，人声播报。
+3d的飞船射击游戏，与npc混战，键盘W/S/A/D/R/F前后左右升降，鼠标控制视角，点左键射击。进入即玩，刷新再来。背景音乐，物理音效，语音播报。
 
 支持新版本chrome/firefox。游戏演示 <http://spacewar.coding.io/>
 
@@ -19,7 +19,7 @@
 - 与机智敏捷的npc混战
 - 环绕音响，激情澎湃的背景音乐
 - 各种物理音效
-- 骚气的人声播报
+- 骚气的语音播报
 - 不限定的地图定制
 
 ## 用到的HTML5技术
@@ -27,13 +27,37 @@
 - 基于three.js的canvas-3d动画渲染
 - webgl硬件加速
 - audio标签音频播放
+- 开启全屏的js-api
 - 锁定鼠标指针的js-api
 
 ## 未来的改变
 
 - 为代码添加注释，便于大家阅读
-- 生产环境使用七牛cdn加载静态资源
+- 生产环境使用七牛cdn加载静态资源 √
 - 更新three.js等陈旧依赖，使用最新api
+- 重写过去的一些错误/过度设计
 - 让npc的ai更丰富
 - 使用飞船模型，而不是方块
 - 更加奇形怪状的地图
+
+## 部分文件结构说明
+
+```plain
+- game/
+  - Driver.js    # 驱动类抽象
+  - AIDriver.js    # AI驱动，弱智决策
+  - UserDriver.js    # 玩家驱动，绑定鼠标/键盘
+  - Unit.js    # 单位类抽象
+  - Station.js    # 空间站，摆设
+  - Ship.js    # 飞船
+  - Missile.js    # 导弹，杀伤
+  - World.js    # 世界类，主程序
+- lib/
+  - jquery.min.js    # 用于dom操作
+  - stats.min.js    # 实时显示性能数据
+  - three.min.js    # 用于3d绘图
+  - class.js    # 用于快速编写简单类
+  - locker.js    # 全屏/锁鼠api
+  - Timer.js    # 计时相关
+  - SoundPlayer.js    # 声音播放点，3d定位
+```
