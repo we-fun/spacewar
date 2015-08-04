@@ -1,4 +1,4 @@
-# 空间大战 `space`
+# 空间大战 `spacewar`
 
 ![截图](http://7xig6a.com1.z0.glb.clouddn.com/20150331225000.png)
 
@@ -10,7 +10,7 @@
 
 2013年5/6月份鼓捣three.js，喜欢第一人称射击，于是造了这个游戏，空间大战。后来想移植到mobile，苦于webgl支持不好，未果。想借websocket做成多人在线版本，也未果。
 
-如今拿出，希望做些修改，参加coding的HTML5大赛，因为它非常符合。项目开源，欢迎小伙伴前来观摩、交流思想、提交代码。希望大家[投我一票](https://coding.net/event/html5/vote?page=1)，谢谢。
+如今拿出，希望做些修改，参加coding的HTML5大赛，因为它非常符合。项目开源，欢迎小伙伴前来观摩、交流思想、提交代码。希望大家~~[投我一票](https://coding.net/event/html5/vote?page=1)~~，谢谢。
 
 ## 游戏亮点
 
