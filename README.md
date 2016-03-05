@@ -4,7 +4,7 @@
 
 3d的飞船射击游戏，与npc混战，键盘W/S/A/D/R/F前后左右升降，鼠标控制视角，点左键射击。进入即玩，刷新再来。背景音乐，物理音效，语音播报。
 
-支持新版本chrome/firefox。游戏演示 <http://spacewar.coding.io/>
+支持新版本chrome/firefox。游戏演示 ~~<http://spacewar.coding.io/>~~ <http://fritx.me/spacewar/>
 
 ## 背景说明
 
