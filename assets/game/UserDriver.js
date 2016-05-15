@@ -90,8 +90,8 @@
 		onMouseMove: function( event ){
 			if ( ! this.ship.world.locked ) return;
 			event = event.originalEvent;
-			var dx = event.webkitMovementX || event.mozMovementX || 0,
-			dy = event.webkitMovementY || event.mozMovementY || 0;
+			var dx = event.movementX || event.webkitMovementX || event.mozMovementX || 0,
+			dy = event.movementY || event.webkitMovementY || event.mozMovementY || 0;
 			
 			this.lon += dx * UserDriver.lookingSpeed;
 			this.lat += dy * UserDriver.lookingSpeed * World.windowRatio;
